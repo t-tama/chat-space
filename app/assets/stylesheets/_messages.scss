@@ -42,8 +42,31 @@
   &__group-list{
     background-color: #2f3e51;
     height: calc(100vh - 100px);
-    .group-list-items__name{
-      
+    .group-list-items{
+      background-color: #2f3e51;
+      height: 91px;
+      padding-top: 20px;
+      &__name{
+        background-color: #2f3e51;
+        color: #ffffff;
+        height: 15px;
+        width: 260px;
+        font-size: 15px;
+        line-height: 15px;
+        margin: 0 auto;
+
+      }
+      &__message{
+        background-color: #2f3e51;
+        color: #ffffff;
+        height: 11px;
+        width: 260px;
+        font-size: 11px;
+        line-height: 11px;
+        margin-top: 5px;
+        margin-left: 20px;
+
+      }
     }
   }
     
