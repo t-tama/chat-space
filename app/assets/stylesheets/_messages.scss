@@ -8,11 +8,45 @@
   float: left;
   &__user-name{
     height: 100px;
+    font-size: 16px;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .top-items{
+      background-color: #253141;
+      height: 20px;
+      width: 260px;
+      display: flex;
+      justify-content: space-between;
+      &__name{
+        line-height: 20px;
+      }
+      &__icons{
+        color: #ffffff;
+        width: 60px;
+        line-height: 20px;
+        text-align: right;
+          .group-icon{
+            color: #ffffff;
+            text-decoration: none;
+            letter-spacing: 5px;
+          }
+          .account-icon{
+            color: #ffffff;
+            text-decoration: none;
+          }
+      }
+    }
   }
   &__group-list{
     background-color: #2f3e51;
     height: calc(100vh - 100px);
+    .group-list-items__name{
+      
+    }
   }
+    
 }
 
 .chat-main{
