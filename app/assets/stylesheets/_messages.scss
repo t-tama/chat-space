@@ -3,6 +3,7 @@
 }
 
 .side-bar{
+  @include clearfix();
   background-color: #253141;
   width: 300px;
   float: left;
@@ -73,13 +74,54 @@
 }
 
 .chat-main{
+  @include clearfix();
   background-color: #ffffff;
   width: calc(100vw - 300px);
   height: 100vh;
   float: left;
   &__group-info{
-    height: 99px;
+    height: 100px;
     border-bottom: 1px solid #eeeeee;
+    display: flex;
+    justify-content: space-between;
+     .group-info{
+       width: 150px;
+       margin-left: 40px;
+       padding-top: 35px;
+         &__name{
+           height: 30px;
+           font-size: 20px;
+           color: #333333;
+           line-height: 30px;
+         }
+         &__member{
+           height: 20px;
+           font-size: 12px;
+           color: #999999;
+           line-height: 20px;
+           margin-top: 15px;
+
+         }
+     }
+     .group-edit{
+       width: 72px;
+       margin-right: 40px;
+       padding-top: 28px;
+       &__btn{
+         color: #38aef0;
+         border-color: #38aef0;
+         border-style: solid;
+         border-width: 1px;
+         font-size: 16px;
+         height: 40px;
+         width: 72px;
+         margin: 0 auto;
+         display: block;
+         text-decoration: none;
+         text-align: center;
+         line-height: 40px;
+       }
+     }
   }
   &__message-list{
     background-color: #fafafa;
