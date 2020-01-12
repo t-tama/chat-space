@@ -1,8 +1,6 @@
 .chat-main.clearfix
   .chat-main__group-info
-    /chat-main__group-info
     .group-info
-      /group-info
       .group-info__name
         Group01
       .group-info__member
@@ -10,6 +8,40 @@
     .group-edit
       =link_to 'Edit', '#', class: "group-edit__btn"
   .chat-main__message-list
-    chat-main__message-list
+    .message-box
+      .message-box__info
+        .message-box__info__name
+          masa
+        .message-box__info__date
+          2020/01/01(Wed) 18:33:01
+      .message-box__message
+        message-box__message
+    /Dummy-message01
+    .message-box
+      .message-box__info
+        .message-box__info__name
+          dummy_name_mojisu-gaooi-namaenobaai01
+        .message-box__info__date
+          2020/01/02(Thu) 18:33:01
+      .message-box__message
+        dummy-message_aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+    /Dummy-message02
+    .message-box
+      .message-box__info
+        .message-box__info__name
+          dummy_name_mojisu-gaooi-namaenobaai02
+        .message-box__info__date
+          2020/01/03(Fri) 18:33:01
+      .message-box__message
+        dummy-message_aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+
   .chat-main__message-form
-    chat-main__message-form
+    .input-form
+      %form.input-form__message
+        %input{type: "text", placeholder: "type a message"}
+        %label{class: "input-form__image"}
+          =icon('far', 'image')
+          %input{type: "file", class: "uploader"}
+    %form.form-btn
+      %input{type: "submit", class: "btn-item", value: "Send"}
+
