@@ -24,7 +24,7 @@ Things you may want to cover:
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_name|string|PK, null: false, index: true|
+|name|string|null: false, index: true|
 |e-mail|string|null: false , unique: true|
 |password|string|null :false, null: false|
 
@@ -37,7 +37,7 @@ has_many :messages
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|group_name|string|PK,null: false|
+|name|string|null: false|
 
 ### Association
 has_many :groups_users
@@ -47,8 +47,8 @@ has_many :messages
 ## groups_usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|references|PK, null: false, foreign_key: true|
-|group_id|references|PK,null: false, foreign_key: true|
+|user|references|null: false, foreign_key: true|
+|group|references|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :group
@@ -60,8 +60,8 @@ has_many :messages
 |------|----|-------|
 |body|string|
 |image|string|
-|group_id|references|null: false, foreign_key: true|
-|user_id|references|null: false, foreign_key: true|
+|group|references|null: false, foreign_key: true|
+|user|references|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :group
