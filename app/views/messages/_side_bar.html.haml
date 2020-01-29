@@ -5,31 +5,17 @@
         /masa
         =current_user.name
       .top-items__icons
-        =link_to "#", class: "group-icon" do
+        =link_to new_group_path, class: "group-icon" do
           = icon('fas', 'edit')
         =link_to edit_user_path(current_user), class: "account-icon" do
           = icon('fas', 'cog')
+  
   .side-bar__group-list
-    .group-list-items
-      .group-list-items__name
-        group01
-      .group-list-items__message
-        テスト投稿。。
-    /Dummy01
-    .group-list-items
-      .group-list-items__name
-        Dummy01
-      .group-list-items__message
-        ダミー投稿。
-    /Dummy02
-    .group-list-items
-      .group-list-items__name
-        group02
-      .group-list-items__message
-        ダミー投稿。。
-    /Dummy03
-    .group-list-items
-      .group-list-items__name
-        group03
-      .group-list-items__message
-        ダミー投稿。。。
+    - current_user.groups.each do |group|
+      .group-list-items
+        = link_to '#' do
+          .group-list-items__name
+            = group.name
+          .group-list-items__message
+            テスト投稿。
+ 
